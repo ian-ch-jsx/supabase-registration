@@ -1,3 +1,23 @@
-h1 {
-  color: blueviolet;
+.auth-container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  width: 250px;
+}
+
+.auth-tabs {
+  display: flex;
+  justify-content: center;
+  margin: auto auto 10px auto;
 }
