@@ -1,6 +1,7 @@
 import AuthForm from '../../components/Auth/AuthForm';
 import { useState } from 'react';
 import { signInUser, signUpUser } from '../../services/users';
+import classNames from 'classnames';
 import './Auth.css';
 
 export default function Auth({ setCurrentUser }) {
@@ -30,6 +31,7 @@ export default function Auth({ setCurrentUser }) {
           onClick={() => {
             setType('signin');
           }}
+          className={classNames({ active: type === 'signin' })}
         >
           Sign In
         </h3>
@@ -37,11 +39,11 @@ export default function Auth({ setCurrentUser }) {
           onClick={() => {
             setType('signup');
           }}
+          className={classNames({ active: type === 'signup' })}
         >
           Sign Up
         </h3>
       </div>
-      <p>type: {type}</p>
       <AuthForm
         setError={error}
         email={email}
