@@ -19,7 +19,7 @@ export default function Auth({ setCurrentUser }) {
         resp = await signUpUser(email, password);
       }
       setCurrentUser(resp);
-    } catch {
+    } catch (error) {
       setError('Error. Please try again.');
     }
   };
@@ -45,7 +45,7 @@ export default function Auth({ setCurrentUser }) {
         </h3>
       </div>
       <AuthForm
-        setError={error}
+        error={error}
         email={email}
         setEmail={setEmail}
         password={password}
