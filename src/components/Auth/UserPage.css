@@ -1,0 +1,9 @@
+.user-container {
+  display: flex;
+  margin: 40px auto;
+  justify-content: center;
+}
+
+.user-container img {
+  filter: drop-shadow(3px 3px 4px #6e6e6e);
+}
